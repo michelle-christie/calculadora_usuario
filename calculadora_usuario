@@ -1,0 +1,41 @@
+def lin():
+    print('-' * 30)
+
+def calculadora(n1, n2, op):
+    if op == '1':
+        print(f'O resultado da operação é: {n1 + n2:.2f}')
+    elif op == '2':
+        print(f'O resultado da operação é {n1 - n2:.2f}')
+    elif op == '3':
+        print(f'O resultado da operação é: {n1 * n2:.2f}')
+    elif op == '4':
+        if n2 != 0:
+            print(f'O resultado da operação é {n1 / n2:.2f}')
+        else:
+            print("Divisão por zero não é permitida.")
+    else:
+        print("Opção inválida.")
+
+while True:
+
+    lin()
+    print('LISTA DE OPERAÇÔES')
+    lin()
+    print('1: Para Soma')
+    print('2: Para Subtração')
+    print('3: Para Multiplicação')
+    print('4: Para Divisão')
+    print('0: Para Sair da calculadora')
+    lin()
+    op = input('Digite o número para a operação: ')
+
+    lin()
+    if op == '0':
+        print('Saindo da calculadora...')
+        break
+    elif op not in ['1', '2', '3', '4']:
+        print('Opção não existe.')
+        continue
+    n1 = float(input('Digite o primeiro valor: '))
+    n2 = float(input('Digite o segundo valor: '))
+    calculadora(n1, n2, op)
